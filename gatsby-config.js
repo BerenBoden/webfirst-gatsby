@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Webfirst - Taranaki Web Development & Design`,
-    description: `Web development services and `,
+    description: `Web development services and design in Taranaki`,
     author: `@gatsbyjs`,
   },
   plugins: [
