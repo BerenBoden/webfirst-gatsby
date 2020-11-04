@@ -7,7 +7,3 @@ image: ../../images/javscript.jpg
 tags: 
     - code
 ---
-
-Welcum to blog see my stuff
-Welcum to blog see my stuff
-Welcum to blog see my stuff

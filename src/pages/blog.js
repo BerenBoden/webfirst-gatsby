@@ -3,37 +3,35 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql, StaticQuery } from 'gatsby'
 import Post from '../components/Post'
-import Sidebar from '../components/Sidebar'
 import {Row, Col} from 'reactstrap';
+import Sidebar from '../components/Sidebar'
 
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Row>
-      <Col md="8">
         <StaticQuery query={indexQuery} render={data => {
           return (
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Post className=""
-                title={node.frontmatter.title}
-                  author={node.frontmatter.author}
-                  path={node.frontmatter.path}
-                  date={node.frontmatter.date}
-                  body={node.excerpt}
-                  fluid={node.frontmatter.image.childImageSharp.fluid}
-                  tags={node.frontmatter.tags}
-                />
-              ))}
+            <div className="container">
+                <div className="row m-0 text-center">
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                        <Col md="4">
+                            <Post 
+                            title={node.frontmatter.title}
+                            author={node.frontmatter.author}
+                            path={node.frontmatter.path}
+                            date={node.frontmatter.date}
+                            body={node.excerpt}
+                            fluid={node.frontmatter.image.childImageSharp.fluid}
+                            tags={node.frontmatter.tags}
+                            />
+                        </Col>
+                        
+                    ))}
+                </div>
             </div>
           )
         }}/>
-      </Col>
-      <Col md="4">
-        <Sidebar />
-      </Col>
-    </Row>
   </Layout>
 )
 
