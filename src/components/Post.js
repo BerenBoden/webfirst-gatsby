@@ -8,12 +8,12 @@ import { Badge } from 'reactstrap'
 const Post = ({title, author, slug, date, body, fluid, tags}) => {
     return (
         <Card>
-            <Link to={slug}>
+            <Link to={`/${slug}`}>
                 <Img className="card-image-top" fluid={fluid} />
             </Link>
             <CardBody>
                 <CardTitle>
-                    <Link to={slug}>{title}</Link>
+                    <Link to={`/${slug}`}>{title}</Link>
                 </CardTitle>
                 <CardSubtitle>
                     <span className="text-info">{date}</span> by{' '}
@@ -29,7 +29,7 @@ const Post = ({title, author, slug, date, body, fluid, tags}) => {
                         </li>
                     )) : <p>No tags to display</p>}
                 </ul>
-                <Link to={slug} className="btn btn-outline-primary float-right">Read More</Link>
+                <Link to={`/${slug}`} className="btn btn-outline-primary float-right">Read More</Link>
             </CardBody>
         </Card>
     )
