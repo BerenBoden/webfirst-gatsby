@@ -6,7 +6,7 @@ const tags = () => {
     return (
         <Layout pagetitle="All tags">
             <SEO title="tags" keywords={[`tags`, `web development`, `web development taranaki`]}>
-
+                
             </SEO>
         </Layout>
     )

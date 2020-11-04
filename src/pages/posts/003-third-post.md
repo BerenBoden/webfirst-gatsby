@@ -5,4 +5,5 @@ author: "Beren Boden"
 image: ../../images/javscript.jpg
 tags: 
     - code
+    - design
 ---
