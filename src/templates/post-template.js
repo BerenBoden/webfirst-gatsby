@@ -1,20 +1,16 @@
 import React from 'react'
 import Layout from '../components/layout';
-import Sidebar from '../components/Sidebar';
 import {graphql, Link} from 'gatsby';
 import SEO from '../components/seo';
-import {Row, Col, CardBody, CardRow, Card, Badge, CardSubtitle} from 'reactstrap'
+import {CardBody, Card, Badge, CardSubtitle} from 'reactstrap'
 import Img from 'gatsby-image'
 import {slugify} from '../util/utilityFunction';
 
 const PostTemplate = ({ data }) => {
     const post = data.markdownRemark.frontmatter
     return (
-        <Layout>
+        <Layout pagetitle={post.title}>
             <SEO title={post.title} />
-            <h1>{post.title}</h1>
-            <Row>
-                <Col md="8">
                     <Card>
                         <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                         <CardBody>
@@ -34,11 +30,6 @@ const PostTemplate = ({ data }) => {
                             </ul>
                         </CardBody>
                     </Card>
-                </Col>
-                <Col md="4">
-                    <Sidebar />
-                </Col>
-            </Row>
         </Layout>
     )
 }

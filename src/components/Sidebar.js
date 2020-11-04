@@ -3,7 +3,6 @@ import {graphql, StaticQuery} from 'gatsby'
 import {Card, CardTitle, CardBody, Form, FormGroup, Input, Button} from 'reactstrap'
 import Img from 'gatsby-image'
 import {Link} from 'gatsby'
-import { node } from 'prop-types'
 
 const Sidebar = () => {
     return (
