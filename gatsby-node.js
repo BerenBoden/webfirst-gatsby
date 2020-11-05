@@ -1,6 +1,6 @@
 const {slugify} = require('./src/util/utilityFunction');
 const path = require('path')
-const _ = require('lodash')
+const _ = require('lodash');
 
 exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions;
@@ -102,7 +102,8 @@ exports.createPages = ({ actions, graphql }) => {
                 context: {
                     limit: postsPerPage,
                     skip: index * postsPerPage,
-                    currentPage
+                    numberOfPages: numberOfPages,
+                    currentPage: currentPage,
                 }
             })
         })

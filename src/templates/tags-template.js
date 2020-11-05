@@ -3,8 +3,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo';
 import {Button, Badge} from 'reactstrap';
 import {slugify} from '../util/utilityFunction'
+import Pagination from '../components/pagination'
 
-const tagsTemplate = ({ pageContext }) => {
+const tagsTemplate = ({ pageContext, numberOfPages, currentPage }) => {
     const {tags, tagPostCounts} = pageContext;
     return (
         <Layout pagetitle="All tags">
@@ -18,6 +19,10 @@ const tagsTemplate = ({ pageContext }) => {
                     </li>
                 ))}
             </ul>
+            <Pagination
+          currentPage={currentPage}
+          numberOfPages={numberOfPages}
+        />
         </Layout>
     )
 }
