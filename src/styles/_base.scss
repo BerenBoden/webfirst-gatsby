@@ -1,6 +1,3 @@
-.container#content {
-  margin-top: 60px;
-}
 body {
   background-color: $light-gray;
 }
@@ -18,20 +15,34 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
 }
+
 .navbar {
-  background-color: white;
-  // border-right: 1px solid rgba(0, 0, 0, 0.4);
-  // border-left: 1px solid rgba(0, 0, 0, 0.4);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-  line-height: 1;
+  color: #fff;
+  padding: 20px 15%;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(5px);
 }
-.navbar-light .navbar-nav .nav-link,
-.navbar-light .navbar-brand {
-  color: #0056b3;
-  &:hover {
-    color: #007bff;
+
+.nav-link {
+  color: #fff;
+  &:hover{
+    color: #ccc;
   }
 }
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.808);
+  border: none;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-brand {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
 ul {
   list-style: none;
   padding: 0;

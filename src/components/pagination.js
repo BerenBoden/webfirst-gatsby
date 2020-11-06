@@ -5,13 +5,13 @@ const pagination = ({currentPage, numberOfPages}) => {
     const isFirst = currentPage === 1
     const isLast = currentPage === numberOfPages
     const previousPage =
-    currentPage - 1 === 1 ? '/' : '/page/' + (currentPage - 1).toString()
+    currentPage - 1 === 1 ? '/blog' : '/page/' + (currentPage - 1).toString()
     const nextPage = '/page/' + (currentPage + 1).toString()
     return (
-        <Pagination aria-label="Page navigation example">
+        <Pagination>
         {isFirst ? (
           <PaginationItem disabled>
-            <PaginationLink previous href="/" />
+            <PaginationLink previous href="/blog" />
           </PaginationItem>
         ) : (
           <PaginationItem>

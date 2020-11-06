@@ -9,7 +9,7 @@ const Post = ({title, author, slug, date, body, fluid, tags}) => {
     return (
         <Card>
             <Link to={`/${slug}`}>
-                <Img className="card-image-top" fluid={fluid} />
+                <Img className="card-image-top" style={{height: '250px', objectFit: 'cover'}} fluid={fluid} />
             </Link>
             <CardBody>
                 <CardTitle>

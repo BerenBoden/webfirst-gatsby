@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../components/layout'
-import SEO from '../components/seo';
+import Layout from '../components/Layout'
+import SEO from '../components/SEO';
 import {Button, Badge} from 'reactstrap';
 import {slugify} from '../util/utilityFunction'
-import Pagination from '../components/pagination'
+import Pagination from '../components/Pagination'
 
 const tagsTemplate = ({ pageContext, numberOfPages, currentPage }) => {
     const {tags, tagPostCounts} = pageContext;

@@ -1,34 +1,47 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 import { graphql, StaticQuery } from 'gatsby'
 import Post from '../components/Post'
-import Pagination from '../components/pagination';
-import {Row, Col} from 'reactstrap' 
+import Pagination from '../components/Pagination';
+import {Row, Col} from 'reactstrap';
+import Sidebar from '../components/Sidebar'
+
 
 const IndexPage = () => {
   const postsPerPage = 6;
   let numberOfPages
   return (
-  <Layout pagetitle="Webfirst - Blog" >
+  <Layout>
     <SEO title="Blog" keywords={['blog', 'taranaki', 'web development']}/>
         <StaticQuery query={indexQuery} render={data => {
           numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage)
           return (
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                    <Post className=""
-                    key={node.id}
-                    title={node.frontmatter.title}
-                    author={node.frontmatter.author}
-                    slug={node.fields.slug}
-                    date={node.frontmatter.date}
-                    body={node.excerpt}
-                    fluid={node.frontmatter.image.childImageSharp.fluid}
-                    tags={node.frontmatter.tags}
-                    />
-              ))}
-            </div>
+            <Row>
+                <Col md="8">
+                <div>
+                <Row>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                        <Col lg="6">
+                            <Post 
+                                key={node.id}
+                                title={node.frontmatter.title}
+                                author={node.frontmatter.author}
+                                slug={node.fields.slug}
+                                date={node.frontmatter.date}
+                                body={node.excerpt}
+                                fluid={node.frontmatter.image.childImageSharp.fluid}
+                                tags={node.frontmatter.tags}
+                            />
+                        </Col>
+                    ))}
+                </Row>
+                </div>
+                </Col>
+                <Col md="4">
+                    <Sidebar />
+                </Col>
+            </Row>
           )
         }}
         />

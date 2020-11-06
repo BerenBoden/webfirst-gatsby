@@ -1,8 +1,8 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import Post from '../components/Post'
 import { graphql } from 'gatsby'
-import Pagination from '../components/pagination';
+import Pagination from '../components/Pagination';
 
 const postListTemplate = props => {
     const posts = props.data.allMarkdownRemark.edges

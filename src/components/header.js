@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React, { useState } from "react"
 import {
   Collapse,
@@ -8,38 +7,39 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
+import Logo from '../images/logo.png'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
   return (
-    <header>
-      <Navbar color="light" light expand="md" style={{marginBottom: '20px'}}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+    <div>
+    <Navbar fixed="top" light expand="sm">
+        <NavbarBrand href="/"><img src={Logo} style={{width: '150px'}} alt=""/></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+          <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/services">Services</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/portfolio">Portfolio</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/blog">Blog</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/about">About</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
         </Collapse>
-      </Navbar>
-    </header>
+    </Navbar>
+  </div>
   )
 }
 

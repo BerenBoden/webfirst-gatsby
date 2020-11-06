@@ -1,11 +1,12 @@
 import React from 'react'
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import {graphql, Link} from 'gatsby';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import {CardBody, Card, Badge, CardSubtitle} from 'reactstrap'
 import Img from 'gatsby-image'
 import {slugify} from '../util/utilityFunction';
 import { DiscussionEmbed } from 'disqus-react';
+import {Row, Col} from 'reactstrap';
 
 const PostTemplate = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter
@@ -18,10 +19,13 @@ const PostTemplate = ({ data, pageContext }) => {
         url: baseUrl + pageContext.slug
     }
     return (
-        <Layout pagetitle={post.title}>
+        <Layout >
+            <h1 className="text-left my-10 text-2xl font-bold capitalize">{post.title}</h1>
             <SEO title={post.title} />
             <Card>
-                <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
+                <div > 
+                    <Img className="card-image-top" style={{height: '300px', objectFit: 'cover'}} fluid={post.image.childImageSharp.fluid}/>
+                </div>
                 <CardBody>
                     <CardSubtitle>
                         <span className="text-info">{post.date}</span>by {' '}
