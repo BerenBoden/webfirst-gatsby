@@ -20,7 +20,8 @@ const Sidebar = () => {
                     </Form>
                 </CardBody>
             </Card>
-            <Card>
+            
+            <Card className="md:block hidden">
                 <CardBody>
                     <CardTitle className="text-center">
                         Recent Posts

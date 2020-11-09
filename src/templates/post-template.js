@@ -6,7 +6,6 @@ import {CardBody, Card, Badge, CardSubtitle} from 'reactstrap'
 import Img from 'gatsby-image'
 import {slugify} from '../util/utilityFunction';
 import { DiscussionEmbed } from 'disqus-react';
-import {Row, Col} from 'reactstrap';
 
 const PostTemplate = ({ data, pageContext }) => {
     const post = data.markdownRemark.frontmatter

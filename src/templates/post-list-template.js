@@ -3,6 +3,8 @@ import Layout from '../components/Layout'
 import Post from '../components/Post'
 import { graphql } from 'gatsby'
 import Pagination from '../components/Pagination';
+import {Row, Col} from 'reactstrap'
+import Sidebar from '../components/Sidebar'
 
 const postListTemplate = props => {
     const posts = props.data.allMarkdownRemark.edges
@@ -10,18 +12,29 @@ const postListTemplate = props => {
   
     return (
       <Layout pagetitle={`Page: ${currentPage}`}>
-        {posts.map(({ node }) => (
-          <Post
-            key={node.id}
-            slug={node.fields.slug}
-            title={node.frontmatter.title}
-            author={node.frontmatter.author}
-            date={node.frontmatter.date}
-            body={node.excerpt}
-            tags={node.frontmatter.tags}
-            fluid={node.frontmatter.image.childImageSharp.fluid}
-          />
-        ))}
+      <Row>
+      <Col md="8">
+        <Row>
+          {posts.map(({ node }) => (
+              <Col lg="6">
+                <Post
+                  key={node.id}
+                  slug={node.fields.slug}
+                  title={node.frontmatter.title}
+                  author={node.frontmatter.author}
+                  date={node.frontmatter.date}
+                  body={node.excerpt}
+                  tags={node.frontmatter.tags}
+                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                />
+              </Col>
+            ))}
+          </Row>
+          </Col>
+          <Col md="4">
+            <Sidebar />
+          </Col>
+        </Row>
         <Pagination
           currentPage={currentPage}
           numberOfPages={numberOfPages}

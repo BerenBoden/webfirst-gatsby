@@ -1,8 +1,11 @@
 import React from 'react'
-import ContactImg from '../../images/contact_img.png';
+import ContactImg from '../../images/contact-img.png';
 import Form from './Form'
 
+
+
 const Contact = () => {
+    
     return (
         <div>
             <div className="lg:flex items-start">

@@ -4,10 +4,10 @@ import showcaseImg02 from '../../images/showcase-img-2.png'
 
 const ShowcaseFeatures = () => {
     return (
-        <div className="my-10">
+        <div className="">
             <div className="lg:flex items-end">
                 <div className="lg:w-1/3">
-                    <img className="lg:w-full lg:h-full lg:pb-0 pb-8 w-3/4 h-3/4" src={showcaseImg02} alt="showcase feature img" />
+                    <img className="lg:w-full lg:h-full lg:pb-0 pb-8" src={showcaseImg02} alt="showcase feature img" />
                 </div>
                 <div className="lg:w-2/3 lg:ml-16">
                     <h1 className="font-bold uppercase text-3xl text-left"><span className="text-blue-500">Free</span> for 30 days</h1>

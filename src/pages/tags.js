@@ -5,9 +5,7 @@ import SEO from '../components/SEO';
 const tags = () => {
     return (
         <Layout>
-            <SEO title="tags" keywords={[`tags`, `web development`, `web development taranaki`]}>
-
-            </SEO>
+            <SEO title="tags" keywords={[`tags`, `web development`, `web development taranaki`]} />
         </Layout>
     )
 }

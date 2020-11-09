@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import '../styles/index.scss'
@@ -19,8 +18,8 @@ const Layout = ({ children, pagetitle }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{margin: `0 auto`,maxWidth: '70%',}}>
+      <div className="main-div"
+        style={{margin: '0 auto'}}>
         <main>
           <h1>{pagetitle}</h1>
             <div style={{marginTop: '100px'}}>

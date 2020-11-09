@@ -14,9 +14,9 @@ const FeatureCards = () => {
 
     const renderCardInfo = (card, index) => {
         return (
-            <div key={index} className="shadow-xl px-4 flex items-center h-40">
+            <div key={index} className="shadow-xl px-4 flex py-12 items-center">
                 <div>
-                    <div className="flex items-center"><FontAwesomeIcon className="mr-1 text-blue-600" icon={faCheckCircle}/><h1 className="font-bold text-xl">{card.title}</h1></div>
+                    <div className="flex items-center"><FontAwesomeIcon className="mr-1 text-blue-600" icon={faCheckCircle}/><h1 className="font-bold text-sm lg:text-xl">{card.title}</h1></div>
                     <p className="text-sm">{card.description}</p>
                 </div>
             </div>

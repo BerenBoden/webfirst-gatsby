@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 const PricingCards = () => {
+    const element = <FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/>
     const cardInfo = [
-        {plan: 'Basic', price: 25, priceYearly: 200, descriptionTitle: 'Best For Brochure And Advertising Websites', checklist: ['Premium Theme','Upto 5 Pages','Professional Design','Responsive/Mobile Friendly','Search Engine Optimization','Track Your Analytics','Your Own Desgin (optional)','Handcoded Or Wordpress','Secure Site (SSL)','Custom Domain']},
-        {plan: 'Basic', price: 25, priceYearly: 200, descriptionTitle: 'Best For Brochure And Advertising Websites', checklist: ['Premium Theme','Upto 5 Pages','Professional Design','Responsive/Mobile Friendly','Search Engine Optimization','Track Your Analytics','Your Own Desgin (optional)','Handcoded Or Wordpress','Secure Site (SSL)','Custom Domain']},
-        {plan: 'Basic', price: 25, priceYearly: 200, descriptionTitle: 'Best For Brochure And Advertising Websites', checklist: ['Premium Theme','Upto 5 Pages','Professional Design','Responsive/Mobile Friendly','Search Engine Optimization','Track Your Analytics','Your Own Desgin (optional)','Handcoded Or Wordpress','Secure Site (SSL)','Custom Domain']},
+        {plan: 'Basic', price: 40, priceYearly: 350, descriptionTitle: 'Best For Brochure And Advertising Websites', checklist: ['Up To 5 Pages','24/7 Customer Service', 'Includes Hosting', 'Unlimited Edits & Updates','Search Engine Optimization', 'Track Your Analytics','Your Own Desgin (optional)','Handcoded Or Wordpress','Secure Site (SSL)','Custom Domain']},
+        {plan: 'Professional', price: 150, priceYearly: 800, descriptionTitle: 'Best For Blogging and SEO websties', checklist: ['Everything From Basic Plan', 'Up To 7 Pages','Responsive/Mobile Friendly','Email Subscription For Email Marketing','Custom Email','Blogging Page', 'Daily Blog Posts']},
+        {plan: 'Premium', price: 300, priceYearly: 1500, descriptionTitle: 'Best For Ecommerce Websites', checklist: ['Everything From Basic Plan & Gold Plan','Up To 9 Pages','Shop Page','Add To Cart Functionality','Checkout Page','Payment Functionality','Up To 50 Items','User Sign In / Sign Up']},
     ]
 
     const renderCardInfo = (card, index) => {
@@ -20,24 +21,25 @@ const PricingCards = () => {
                         <div>
                             <h1 className="text-3xl font-bold my-2 text-center">${card.price}/M</h1>
                             <p className="my-3 text-center">Or ${card.priceYearly} Upfront</p>
+                            <p className="text-sm my-4">* {card.descriptionTitle}</p>
                             <div>
                                 <ul>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[0]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[1]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[2]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[3]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[4]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[5]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[6]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[7]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[8]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[9]}</li>
+                                    <li>{element} {card.checklist[0]}</li>
+                                    <li>{element} {card.checklist[1]}</li>
+                                    <li>{element} {card.checklist[2]}</li>
+                                    <li>{element} {card.checklist[3]}</li>
+                                    <li>{element} {card.checklist[4]}</li>
+                                    <li>{element} {card.checklist[5]}</li>
+                                    <li>{element} {card.checklist[6]}</li>
+                                    <li>{element} {card.checklist[7]}</li>
+                                    <li>{element} {card.checklist[8]}</li>
+                                    <li>{element} {card.checklist[9]}</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center">
-                        <button className="bg-blue-600 hover:bg-blue-200 px-6 py-2">
+                    <div className="flex justify-center py-4">
+                        <button className="bg-blue-600 rounded-sm hover:bg-blue-200 px-6 py-2">
                             Contact Us
                         </button>
                     </div>
@@ -53,23 +55,24 @@ const PricingCards = () => {
                         <div>
                             <h1 className="text-3xl font-bold my-2 text-center">${card.price}/M</h1>
                             <p className="my-3 text-center">Or ${card.priceYearly} Upfront</p>
+                            <p className="text-sm my-4">* {card.descriptionTitle}</p>
                             <div>
                                 <ul>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[0]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[1]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[2]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[3]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[4]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[5]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[6]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[7]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[8]}</li>
-                                    <li><FontAwesomeIcon icon={faCheckCircle} className="text-blue-600"/> {card.checklist[9]}</li>
+                                    <li>{element} {card.checklist[0]}</li>
+                                    <li>{element} {card.checklist[1]}</li>
+                                    <li>{element} {card.checklist[2]}</li>
+                                    <li>{element} {card.checklist[3]}</li>
+                                    <li>{element} {card.checklist[4]}</li>
+                                    <li>{element} {card.checklist[5]}</li>
+                                    <li>{element} {card.checklist[6]}</li>
+                                    <li>{element} {card.checklist[7]}</li>
+                                    <li>{element} {card.checklist[8]}</li>
+                                    <li>{element} {card.checklist[9]}</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center py-4">
                         <button className="bg-blue-600 rounded-sm hover:bg-blue-200 px-6 py-2">
                             Contact Us
                         </button>

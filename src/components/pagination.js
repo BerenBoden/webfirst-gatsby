@@ -8,7 +8,7 @@ const pagination = ({currentPage, numberOfPages}) => {
     currentPage - 1 === 1 ? '/blog' : '/page/' + (currentPage - 1).toString()
     const nextPage = '/page/' + (currentPage + 1).toString()
     return (
-        <Pagination>
+      <Pagination>
         {isFirst ? (
           <PaginationItem disabled>
             <PaginationLink previous href="/blog" />
@@ -21,13 +21,13 @@ const pagination = ({currentPage, numberOfPages}) => {
         {Array.from({ length: numberOfPages }, (_, i) =>
           currentPage === i + 1 ? (
             <PaginationItem active key={`page-number${i + 1}`}>
-              <PaginationLink href={`/${i === 0 ? '' : 'page/' + (i + 1)}`}>
+              <PaginationLink href={`/blog${i === 0 ? '' : 'page/' + (i + 1)}`}>
                 {i + 1}
               </PaginationLink>
             </PaginationItem>
           ) : (
             <PaginationItem key={`page-number${i + 1}`}>
-              <PaginationLink href={`/${i === 0 ? '' : 'page/' + (i + 1)}`}>
+              <PaginationLink href={`/blog${i === 0 ? '' : 'page/' + (i + 1)}`}>
                 {i + 1}
               </PaginationLink>
             </PaginationItem>
